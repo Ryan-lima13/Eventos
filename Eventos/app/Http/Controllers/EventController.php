@@ -22,6 +22,6 @@ class EventController extends Controller
         $event->private = $request->private;
 
         $event->save();
-        return redirect('/');
+        return redirect('/')->with('msg','Evento Salvo com sucesso!');
     }
 }
